@@ -7,11 +7,14 @@ export default function App() {
   const handlePrompt = async () => {
     if (!prompt.trim()) return; // ignore empty input
     console.log(prompt);
-    const res = await fetch("https://genkit-backend.vercel.app/api/chat", {
-      method: "POST", // important: must be POST
-      headers: { "Content-Type": "application/json" },
-      body: JSON.stringify({ prompt }), // send data
-    });
+    const res = await fetch(
+      "https://genkit-backend-k1x1.onrender.com/api/chat",
+      {
+        method: "POST", // important: must be POST
+        headers: { "Content-Type": "application/json" },
+        body: JSON.stringify({ prompt }), // send data
+      }
+    );
 
     const data = await res.json();
     console.log(data);
