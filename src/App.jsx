@@ -7,7 +7,7 @@ export default function App() {
   const handlePrompt = async () => {
     if (!prompt.trim()) return; // ignore empty input
     console.log(prompt);
-    const res = await fetch("http://localhost:5000/api/chat", {
+    const res = await fetch("https://genkit-backend.vercel.app/", {
       method: "POST", // important: must be POST
       headers: { "Content-Type": "application/json" },
       body: JSON.stringify({ prompt }), // send data
