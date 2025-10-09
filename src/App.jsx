@@ -18,7 +18,7 @@ export default function App() {
 
     const data = await res.json();
     console.log(data);
-    setOutput(data.output || data.error);
+    setOutput(data.text || data.error);
   };
 
   return (
