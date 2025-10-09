@@ -18,7 +18,7 @@ export default function App() {
 
     const data = await res.json();
     console.log(data.text);
-    setOutput(data.text || data.error);
+    setOutput(data.output || data.error);
   };
 
   return (
@@ -36,7 +36,7 @@ export default function App() {
         <div className="chat-messages" id="chatMessages">
           <div className="message ai">
             <div className="message-avatar">🤖</div>
-            <div className="message-bubble">{ output }</div>
+            <div className="message-bubble">{ output.text }</div>
           </div>
         </div>
 
