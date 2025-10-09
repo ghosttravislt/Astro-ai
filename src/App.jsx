@@ -36,7 +36,7 @@ export default function App() {
         <div className="chat-messages" id="chatMessages">
           <div className="message ai">
             <div className="message-avatar">🤖</div>
-            <div className="message-bubble">{output}</div>
+            <div className="message-bubble">{text}</div>
           </div>
         </div>
 
